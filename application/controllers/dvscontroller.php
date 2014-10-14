@@ -454,6 +454,24 @@ class dvscontroller extends CI_Controller{
             $data['reader_details'] = $this->dvs_model->select_query_specific($form_name,$reader_id);
             $data['level_details'] = $this->dvs_model->select_particular_query('levels');
             $this->load->view('Forms/rfid/rfid_form_edit', $data);
+        }else if ($form_name == 'privilege') {
+            $privilege_id = $array[3];
+            $data['title'] = "Edit privilege details";
+            $data['current_page'] = $form_name;
+            $data['privilege_details'] = $this->dvs_model->select_query_specific($form_name,$privilege_id);
+            $this->load->view('Forms/user_registration/privilege_form_edit', $data);
+        }else if ($form_name == 'tag_registration') {
+            $privilege_id = $array[3];
+            $data['title'] = "Edit tag details";
+            $data['current_page'] = $form_name;
+            $data['tag_details'] = $this->dvs_model->select_query_specific($form_name,$privilege_id);
+            $this->load->view('Forms/rfid/tag_form_edit', $data);
+        }else if ($form_name == 'tagging_level') {
+            $privilege_id = $array[3];
+            $data['title'] = "Edit tagging level details";
+            $data['current_page'] = $form_name;
+            $data['level_details'] = $this->dvs_model->select_query_specific($form_name,$privilege_id);
+            $this->load->view('Forms/rfid/tagging_level_form_edit', $data);
         }
     }
 
