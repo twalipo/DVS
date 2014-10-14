@@ -400,6 +400,40 @@ class Dvs_model extends CI_Model{
             );
 
             $this->db->update('tbl_reader',$reader_data,array('id' => $reader_id));
+        }else if($requesting_page == 'tag_registration'){
+            $tag_id = $id;
+
+
+            $tag_data = array(
+                'vendor' => $this->input->post('vendor'),
+                'tag_info' => $this->input->post('tag_info'),
+                'status' => '1'
+
+            );
+
+            $this->db->update('tbl_rfid_tag',$tag_data,array('id' => $tag_id));
+        }else if($requesting_page == 'tagging_level'){
+            $level_id = $id;
+
+
+            $level_data = array(
+                'level_name' => $this->input->post('name'),
+                'status' => '1'
+
+            );
+
+            $this->db->update('tbl_level',$level_data,array('id' => $level_id));
+        }else if($requesting_page == 'privilege'){
+            $privilege_id = $id;
+
+
+            $tag_data = array(
+                'description' => $this->input->post('privilege'),
+                'status' => '1'
+
+            );
+
+            $this->db->update('tbl_priviledge',$tag_data,array('id' => $privilege_id));
         }
 
 
@@ -425,6 +459,30 @@ class Dvs_model extends CI_Model{
             $this->db->where('tbl_reader.id',$id);
             $this->db->join('tbl_location', 'tbl_location.id = tbl_reader.location_id');
             $this->db->join('tbl_level', 'tbl_level.id = tbl_reader.level_id');
+            $query = $this->db->get();
+            return $query->row_array();
+        }else if ($requesting_page == 'privilege'){
+            $status = 1;
+            $this->db->select('*');
+            $this->db->from('tbl_priviledge');
+            $this->db->where('status',$status);
+            $this->db->where('id',$id);
+            $query = $this->db->get();
+            return $query->row_array();
+        }else if ($requesting_page == 'tag_registration'){
+            $status = 1;
+            $this->db->select('*');
+            $this->db->from('tbl_rfid_tag');
+            $this->db->where('status',$status);
+            $this->db->where('id',$id);
+            $query = $this->db->get();
+            return $query->row_array();
+        }else if ($requesting_page == 'tagging_level'){
+            $status = 1;
+            $this->db->select('*');
+            $this->db->from('tbl_level');
+            $this->db->where('status',$status);
+            $this->db->where('id',$id);
             $query = $this->db->get();
             return $query->row_array();
         }
