@@ -55,8 +55,8 @@
                                          <td>" . $details['phone_number'] . "</td>
                                          <td>" . $details['alt_phone_number'] . "</td>
                                          <td>";?><div class="btn-group">
-                                        <button type="button" class="btn btn-default" onclick="rfid_edit_data('pharmacy_registration','<?php echo $details['id']; ?>')">Edit</button>
-                                        <button type="button" class="btn btn-default" onclick="rfid_delete_data('pharmacy_registration','<?php echo $details['id']; ?>')">Delete</button>
+                                        <button type="button" class="btn btn-default" onclick="reg_edit_data('pharmacy_registration','<?php echo $details['id']; ?>')">Edit</button>
+                                        <button type="button" class="btn btn-default" onclick="reg_delete_data('pharmacy_registration','<?php echo $details['id']; ?>')">Delete</button>
                                         </div>
                                         </td>
                                         </tr>
@@ -78,7 +78,7 @@
         $(document).ready(function() {
             $('#dataTables-reader').dataTable({
                 "oLanguage": {
-                    "sEmptyTable":     "No Reader registered yet"
+                    "sEmptyTable":     "No Pharmacy registered yet"
                 }
             });
         });

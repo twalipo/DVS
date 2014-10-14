@@ -400,7 +400,8 @@ class Dvs_model extends CI_Model{
             );
 
             $this->db->update('tbl_reader',$reader_data,array('id' => $reader_id));
-        }else if($requesting_page == 'tag_registration'){
+        }
+        else if($requesting_page == 'tag_registration'){
             $tag_id = $id;
 
 
@@ -412,7 +413,8 @@ class Dvs_model extends CI_Model{
             );
 
             $this->db->update('tbl_rfid_tag',$tag_data,array('id' => $tag_id));
-        }else if($requesting_page == 'tagging_level'){
+        }
+        else if($requesting_page == 'tagging_level'){
             $level_id = $id;
 
 
@@ -423,7 +425,8 @@ class Dvs_model extends CI_Model{
             );
 
             $this->db->update('tbl_level',$level_data,array('id' => $level_id));
-        }else if($requesting_page == 'privilege'){
+        }
+        else if($requesting_page == 'privilege'){
             $privilege_id = $id;
 
 
@@ -434,6 +437,32 @@ class Dvs_model extends CI_Model{
             );
 
             $this->db->update('tbl_priviledge',$tag_data,array('id' => $privilege_id));
+        }
+        else if($requesting_page == 'pharmacy_registration'){
+            $pharmacy_id = $id;
+            $location_id = $this->input->post('location_id');
+
+            $location_data = array(
+                'name' => $this->input->post('location'),
+                'latitude' => $this->input->post('latitude'),
+                'longitude' => $this->input->post('longitude'),
+                'status' => '1'
+
+            );
+
+            $this->db->update('tbl_location',$location_data,array('id' => $location_id));
+
+            $pharmacy_data = array(
+                'name' => $this->input->post('name'),
+                'email' => $this->input->post('email'),
+                'phone_number' => $this->input->post('phone_number'),
+                'alt_phone_number' => $this->input->post('alt_phone_number'),
+                'location_id' => $location_id,
+                'status' => '1'
+
+            );
+
+            $this->db->update('tbl_pharmacy',$pharmacy_data,array('id' => $pharmacy_id));
         }
 
 
@@ -457,6 +486,11 @@ class Dvs_model extends CI_Model{
             $this->status   = 0;
             $this->db->update('tbl_priviledge', $this, array('id' => $id));
         }
+        else if($requesting_page == 'pharmacy_registration'){
+            $this->status   = 0;
+            $this->db->update('tbl_pharmacy', $this, array('id' => $id));
+        }
+
 
     }
 
@@ -473,7 +507,8 @@ class Dvs_model extends CI_Model{
             $this->db->join('tbl_level', 'tbl_level.id = tbl_reader.level_id');
             $query = $this->db->get();
             return $query->row_array();
-        }else if ($requesting_page == 'privilege'){
+        }
+        else if ($requesting_page == 'privilege'){
             $status = 1;
             $this->db->select('*');
             $this->db->from('tbl_priviledge');
@@ -481,7 +516,8 @@ class Dvs_model extends CI_Model{
             $this->db->where('id',$id);
             $query = $this->db->get();
             return $query->row_array();
-        }else if ($requesting_page == 'tag_registration'){
+        }
+        else if ($requesting_page == 'tag_registration'){
             $status = 1;
             $this->db->select('*');
             $this->db->from('tbl_rfid_tag');
@@ -489,7 +525,8 @@ class Dvs_model extends CI_Model{
             $this->db->where('id',$id);
             $query = $this->db->get();
             return $query->row_array();
-        }else if ($requesting_page == 'tagging_level'){
+        }
+        else if ($requesting_page == 'tagging_level'){
             $status = 1;
             $this->db->select('*');
             $this->db->from('tbl_level');
@@ -498,7 +535,18 @@ class Dvs_model extends CI_Model{
             $query = $this->db->get();
             return $query->row_array();
         }
+        else if ($requesting_page == 'pharmacy_registration'){
 
+            $status = 1;
+            $this->db->select('p.id,p.name,tbl_location.id as location_id,tbl_location.name as location_name,tbl_location.latitude,tbl_location.longitude,p.email,p.phone_number,p.alt_phone_number');
+            $this->db->from('tbl_pharmacy p');
+            $this->db->where('p.id',$id);
+            $this->db->where('p.status',$status);
+            $this->db->join('tbl_location', 'tbl_location.id = p.location_id');
+
+            $query = $this->db->get();
+            return $query->row_array();
+        }
 
     }
 
@@ -546,6 +594,41 @@ class Dvs_model extends CI_Model{
 
     }
 
+
+    /*
+    * ***************************
+    *   universal
+    * **************************
+    */
+    public function reg_insert_query($requesting_page){
+
+        if($requesting_page == 'pharmacy_registration'){
+
+            $location_data = array(
+                'name' => $this->input->post('location'),
+                'latitude' => $this->input->post('latitude'),
+                'longitude' => $this->input->post('longitude'),
+                'status' => '1',
+
+            );
+
+            $this->db->insert('tbl_location',$location_data);
+            $location_id = $this->db->insert_id();
+
+            $reader_data = array(
+                'name' => $this->input->post('name'),
+                'email' => $this->input->post('email'),
+                'phone_number' => $this->input->post('phone_number'),
+                'alt_phone_number' => $this->input->post('alt_phone_number'),
+                'location_id' => $location_id,
+                'status' => '1'
+
+            );
+
+            $this->db->insert('tbl_pharmacy',$reader_data);
+
+        }
+    }
 }
 
 ?>

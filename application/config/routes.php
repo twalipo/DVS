@@ -49,6 +49,10 @@ $route['rfid_submission/(:any)'] = 'dvscontroller/rfid_submission/$1';
 $route['rfid_edit/(:any)'] = 'dvscontroller/rfid_edit/$1';
 $route['rfid_delete/(:any)'] = 'dvscontroller/rfid_delete/$1';
 $route['registration_view/(:any)'] = 'dvscontroller/registration_views/$1';
+$route['registration/(:any)'] = 'dvscontroller/registration_form/$1';
+$route['reg_submission/(:any)'] = 'dvscontroller/reg_submission/$1';
+$route['reg_edit/(:any)'] = 'dvscontroller/reg_edit/$1';
+$route['reg_delete/(:any)'] = 'dvscontroller/reg_delete/$1';
 
 $route['tab_view/(:any)'] = 'dvscontroller/user_registration_tabs/$1';
 $route['user_submission/(:any)'] = 'dvscontroller/user_submission/$1';

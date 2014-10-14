@@ -41,6 +41,9 @@
                         <a onclick="menu_options('reader_registration')">Reader Registration</a>
                     </li>
 
+                    <li>
+                        <a onclick="menu_options('tag_registration')">Tag Registration</a>
+                    </li>
                 </ul>
 
 
@@ -67,7 +70,13 @@
                     <li>
                         <a onclick="menu_options('medicine_category')">Medicine Categories</a>
                     </li>
+                    <li>
+                        <a onclick="menu_options('privilege')">Privilege</a>
+                    </li>
 
+                    <li>
+                        <a onclick="menu_options('tagging_level')">Tagging Level</a>
+                    </li>
                 </ul>
 
             </div>

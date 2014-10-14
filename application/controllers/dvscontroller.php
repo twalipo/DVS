@@ -307,6 +307,15 @@ class dvscontroller extends CI_Controller{
         }
 
     }
+    public function registration_form($form_name){
+        $this->load->helper('form');
+
+        if ($form_name== "pharmacy_registration") {
+            $data['title'] = "Add new Pharmacy ";
+            $this->load->view('Forms/pharmacy/pharmacy_registration_form',$data);
+        }
+
+    }
 
     public function rfid_submission($form_name){
         $this->load->library('form_validation');
@@ -609,6 +618,78 @@ class dvscontroller extends CI_Controller{
         $this->load->view('Forms/user_registration/user_registration', $data);
 
     }
+
+    /*
+    | -----------------------------------------
+    | UNIVERSAL CONFIGURATION
+    | -----------------------------------------
+    */
+    public function reg_submission($form_name){
+        $this->load->library('form_validation');
+        if($form_name == 'pharmacy_registration'){
+            $id=$this->input->post('id');
+            /**
+             * if $id is not set then it's an insert request
+             * else it's an update request
+             */
+            if ($id != ''){
+                $this->dvs_model->update_entry($form_name,$id);
+                $data['message'] = "updated";
+                $data['title'] = "Pharmacy Registration";
+                $data['pharmacy_details'] = $this->dvs_model->select_query($form_name);
+                $this->load->view('Forms/pharmacy/pharmacy_registration', $data);
+            }else{
+
+                $this->form_validation->set_rules('name','Pharmacy Name','required');
+                $this->form_validation->set_rules('phone_number','Phone Number','required');
+                $this->form_validation->set_rules('location','Location Name','required');
+                $this->form_validation->set_rules('latitude','Location Latitude','required');
+                $this->form_validation->set_rules('longitude','Location Longitude','required');
+                $this->form_validation->set_rules('email','E-mail','required');
+
+                if($this->form_validation->run() == FALSE){
+                    $this->load->helper('form');
+                    $data['title'] = "Add new Pharmacy ";
+                    $this->load->view('Forms/pharmacy/pharmacy_registration_form',$data);
+                }else{
+
+                    $this->dvs_model->reg_insert_query($form_name);
+                    $data['message'] = "success";
+                    $data['title'] = "Pharmacy Registration";
+                    $data['pharmacy_details'] = $this->dvs_model->select_query($form_name);
+                    $this->load->view('Forms/pharmacy/pharmacy_registration', $data);
+                }
+
+            }
+        }
+
+    }
+
+    public function reg_edit($form_name){
+        $this->load->helper('form');
+        $array = $this->uri->segment_array();
+        if ($form_name == 'pharmacy_registration') {
+            $pharmacy_id = $array[3];
+            $data['title'] = "Edit Pharmacy details";
+            $data['pharmacy_details'] = $this->dvs_model->select_query_specific($form_name,$pharmacy_id);
+            $this->load->view('Forms/pharmacy/pharmacy_form_edit', $data);
+        }
+    }
+
+    public function reg_delete($form_name){
+        $this->load->helper('html');
+        $array = $this->uri->segment_array();
+
+        if ($form_name == 'pharmacy_registration') {
+            $id = $array[3];
+            $this->dvs_model->delete_query($form_name,$id);
+            $data['message'] = "deleted";
+            $data['title'] = "Pharmacy Registration";
+            $data['pharmacy_details'] = $this->dvs_model->select_query($form_name);
+            $this->load->view('Forms/pharmacy/pharmacy_registration', $data);
+        }
+    }
+
 
 
 }

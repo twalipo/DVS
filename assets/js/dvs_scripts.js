@@ -261,7 +261,62 @@ function add_new_data(form_header){
     }else if(form_header == 'medicine_type' || form_header == 'medicine_category' || form_header == 'med_registration') {
         var link = "index.php/med_config_registration/" + form_header;
 
+    }else if(form_header == 'pharmacy_registration'){
+        var link = "index.php/registration/"+form_header;
     }
+    $.ajax({
+        url: link,
+        dataType: 'html',
+        success: function (data) {
+            $("#page-wrapper").html(data);
+        }
+    });
+
+}
+
+function reg_submit_data(form_name,action){
+
+    if(action == 'insert'){
+        $.ajax({
+            type: 'post',
+            dataType: 'html',
+            url:  'index.php/reg_submission/'+form_name,
+            data: $('#userForm').serialize(),
+            success: function (data) {
+                $("#page-wrapper").html(data);
+            }
+
+        });
+    }else{
+        $.ajax({
+            type: 'post',
+            dataType: 'html',
+            url:  'index.php/reg_submission/'+form_name,
+            data: $('#userForm').serialize(),
+            success: function (data) {
+                $("#page-wrapper").html(data);
+            }
+
+        });
+    }
+
+}
+
+function reg_edit_data(form_header,edit_id){
+
+    var link="index.php/reg_edit/"+form_header+"/"+edit_id;
+    $.ajax({
+        url: link,
+        dataType: 'html',
+        success: function (data) {
+            $("#page-wrapper").html(data);
+        }
+    });
+}
+
+function reg_delete_data(form_header,delete_id){
+
+    var link="index.php/reg_delete/"+form_header+"/"+delete_id;
     $.ajax({
         url: link,
         dataType: 'html',
