@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c7db165-25ab-43de-a0da-0acfce7bd11e" name="Default" comment="" />
+    <ignored path="codeignator.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="codeignator" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1050">
+              <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dvscontroller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/dvscontroller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1614" max-vertical-offset="3045">
+              <caret line="390" column="59" selection-start-line="390" selection-start-column="51" selection-end-line="390" selection-end-column="59" />
+              <folding>
+                <element signature="n#index#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#med_config_delete#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#medical_drug_registration#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#medicine_configuration#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#med_config_registration#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#med_config_edit#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="e#13468#19548#0#PHP" expanded="false" />
+                <element signature="e#15370#19548#0#PHP" expanded="false" />
+                <element signature="n#rfid_edit#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#rfid_delete#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#user_registration_tabs#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#user_submission#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#user_edit#0;n#dvscontroller#0;n#!!top" expanded="false" />
+                <element signature="n#user_delete#0;n#dvscontroller#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="privilege_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/Forms/user_registration/privilege_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="675">
+              <caret line="27" column="89" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tag_registration_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/tag_registration_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="735">
+              <caret line="27" column="104" selection-start-line="27" selection-start-column="96" selection-end-line="27" selection-end-column="104" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tagging_level_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/tagging_level_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="675">
+              <caret line="30" column="129" selection-start-line="30" selection-start-column="129" selection-end-line="30" selection-end-column="129" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tag_registration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/tag_registration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1275">
+              <caret line="53" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+              <folding>
+                <marker date="1413217363000" expanded="false" signature="427:439" placeholder="..." />
+                <marker date="1413217363000" expanded="false" signature="575:587" placeholder="..." />
+                <marker date="1413217363000" expanded="false" signature="728:740" placeholder="..." />
+                <marker date="1413217363000" expanded="false" signature="855:869" placeholder="..." />
+                <marker date="1413217363000" expanded="true" signature="870:1130" placeholder="..." />
+                <marker date="1413217363000" expanded="true" signature="2120:2387" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tagging_level_configuration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/tagging_level_configuration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="1230">
+              <caret line="48" column="124" selection-start-line="48" selection-start-column="111" selection-end-line="48" selection-end-column="124" />
+              <folding>
+                <marker date="1413217363000" expanded="false" signature="427:439" placeholder="..." />
+                <marker date="1413217363000" expanded="false" signature="585:597" placeholder="..." />
+                <marker date="1413217363000" expanded="false" signature="748:760" placeholder="..." />
+                <marker date="1413217363000" expanded="false" signature="885:899" placeholder="..." />
+                <marker date="1413217363000" expanded="true" signature="900:1089" placeholder="..." />
+                <marker date="1413217363000" expanded="true" signature="2033:2225" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="privilege_configuration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/Forms/user_registration/privilege_configuration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="1230">
+              <caret line="50" column="116" selection-start-line="50" selection-start-column="116" selection-end-line="50" selection-end-column="116" />
+              <folding>
+                <marker date="1413219145000" expanded="false" signature="456:468" placeholder="..." />
+                <marker date="1413219145000" expanded="false" signature="611:623" placeholder="..." />
+                <marker date="1413219145000" expanded="false" signature="770:782" placeholder="..." />
+                <marker date="1413219145000" expanded="false" signature="903:917" placeholder="..." />
+                <marker date="1413219145000" expanded="true" signature="918:1166" placeholder="..." />
+                <marker date="1413219145000" expanded="true" signature="2041:2212" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dvs_scripts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/dvs_scripts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="2175">
+              <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!block;n#medical_drug_submit_data#0" expanded="false" />
+                <element signature="n#!!block;n#medical_drug_edit_data#0" expanded="false" />
+                <element signature="n#!!block;n#medical_drug_delete_data#0" expanded="false" />
+                <element signature="n#!!block;n#rfid_edit_data#0" expanded="false" />
+                <element signature="n#!!block;n#rfid_delete_data#0" expanded="false" />
+                <element signature="n#!!block;n#user_add_new_data#0" expanded="false" />
+                <element signature="n#!!block;n#tab_options#0" expanded="false" />
+                <element signature="n#!!block;n#user_submit_data#0" expanded="false" />
+                <element signature="n#!!block;n#user_edit_data#0" expanded="false" />
+                <element signature="n#!!block;n#user_delete_data#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dvs_model.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/models/dvs_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8432056" vertical-offset="1031" max-vertical-offset="2490">
+              <caret line="349" column="32" selection-start-line="349" selection-start-column="32" selection-end-line="349" selection-end-column="32" />
+              <folding>
+                <element signature="n#save_user_registration_data#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#get_tab_name#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#select_specific_user#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#user_delete_query#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#update_user_details#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#get_selected_tab_data#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#med_config_registration#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#load_med_edit_types#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#load_med_types#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#save_med_config_changes#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#delete_med_config#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#load_med_category#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#load_manufacturer#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#load_medicine_registered#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#load_med_registered#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#load_med_edit_categories#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#select_particular_query#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#update_entry#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#delete_query#0;n#Dvs_model#0;n#!!top" expanded="false" />
+                <element signature="n#select_query_specific#0;n#Dvs_model#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/application/controllers/page.php" />
+        <option value="$PROJECT_DIR$/application/views/first_view.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/views/home.php" />
+        <option value="$PROJECT_DIR$/assets/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/assets/js/dvsJquery.js" />
+        <option value="$PROJECT_DIR$/assets/css/sb-admin-2.css" />
+        <option value="$PROJECT_DIR$/application/models/first_modal.php" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medicine_type_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medicine_category_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medicine_category_edit.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medicine_type_edit.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medicine_edit.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medicine_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/registered_medicines.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medicine_category.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medicine_type.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/rfid/reader_registration_form.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/reader_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/rfid/rfid_form_edit.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_type_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_type_edit.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_type.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_category_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_category_edit.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_category.php" />
+        <option value="$PROJECT_DIR$/application/views/header.php" />
+        <option value="$PROJECT_DIR$/application/views/centralpanel.php" />
+        <option value="$PROJECT_DIR$/assets/js/scriptnn.js" />
+        <option value="$PROJECT_DIR$/application/views/footer.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/user_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/user_registration/user_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/user_registration/user_registration_form.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/user_registration/user_registration_edit.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medical_drug/registered_medicines.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_edit.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/views/sidemenu.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/rfid/reader_registration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/rfid/tagging_level_configuration.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/rfid/tag_registration.php" />
+        <option value="$PROJECT_DIR$/assets/js/dvs_scripts.js" />
+        <option value="$PROJECT_DIR$/application/views/Forms/rfid/tagging_level_form.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/rfid/tag_registration_form.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/user_registration/privilege_form.php" />
+        <option value="$PROJECT_DIR$/application/views/Forms/user_registration/privilege_configuration.php" />
+        <option value="$PROJECT_DIR$/application/controllers/dvscontroller.php" />
+        <option value="$PROJECT_DIR$/application/models/dvs_model.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="my interpreter" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="741" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeignator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeignator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DVSBACKEND" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DVS_hadi_veta" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="options.lastSelected" value="appearance" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="recentsLimit" value="5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/application/models" />
+      <recent name="$PROJECT_DIR$/application/views" />
+      <recent name="$PROJECT_DIR$/assets/js" />
+      <recent name="$PROJECT_DIR$/asserts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/views/Forms/user_registration" />
+      <recent name="$PROJECT_DIR$/application/views/Forms/medical_drug" />
+      <recent name="$PROJECT_DIR$/application/views/Forms/rfid" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/application/asserts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Script.dvscontroller.php">
+    <configuration default="false" name="user_registration.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/application/views/Forms/user_registration.php">
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="dvscontroller.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/application/controllers/dvscontroller.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.user_registration.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.dvscontroller.php" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.dvscontroller.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.user_registration.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c7db165-25ab-43de-a0da-0acfce7bd11e" name="Default" comment="" />
+      <created>1409037551104</created>
+      <option name="number" value="Default" />
+      <updated>1409037551104</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="741" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819724" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="21" y="280" width="1238" height="208" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328594" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29402262" sideWeight="0.49882352" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2584814" sideWeight="0.5011765" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="23" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/views/centralpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="5520">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/dvscontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="405">
+          <caret line="18" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#index#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#med_config_delete#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#medical_drug_registration#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#medicine_configuration#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#med_config_registration#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#med_config_edit#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="e#13468#19548#0#PHP" expanded="false" />
+            <element signature="e#15370#19548#0#PHP" expanded="false" />
+            <element signature="n#rfid_edit#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#rfid_delete#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#user_registration_tabs#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#user_submission#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#user_edit#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#user_delete#0;n#dvscontroller#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/centralpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="690">
+          <caret line="35" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1815">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.7417216" vertical-offset="4916" max-vertical-offset="5520">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="29.541666" vertical-offset="709" max-vertical-offset="1815">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../abassgroup/ipfapplication/controllers/mainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1065">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/plugins/dataTables.bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="3570">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.923077" vertical-offset="2993" max-vertical-offset="93135">
+          <caret line="215" column="21" selection-start-line="215" selection-start-column="17" selection-end-line="215" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/sb-admin-2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.538462" vertical-offset="1463" max-vertical-offset="5310">
+          <caret line="121" column="18" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/components/marked/bin/marked">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2895">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="699">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dvsJquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34334764" vertical-offset="0" max-vertical-offset="699">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/plugins/dataTables/dataTables.bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3765">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/plugins/dataTables/jquery.dataTables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="219420">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_type_registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_category_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20905924" vertical-offset="0" max-vertical-offset="750">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_category_registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6759582" vertical-offset="122" max-vertical-offset="735">
+          <caret line="34" column="145" selection-start-line="34" selection-start-column="121" selection-end-line="34" selection-end-column="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8031359" vertical-offset="0" max-vertical-offset="1125">
+          <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_type_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6271777" vertical-offset="45" max-vertical-offset="675">
+          <caret line="33" column="149" selection-start-line="33" selection-start-column="125" selection-end-line="33" selection-end-column="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/centralpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6432161" vertical-offset="1593" max-vertical-offset="2190">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="621">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/CodeIgniter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.120603" vertical-offset="1863" max-vertical-offset="6105">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.045296166" vertical-offset="671" max-vertical-offset="1245">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/scriptnn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="840">
+          <caret line="106" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.276382" vertical-offset="2553" max-vertical-offset="3150">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="105">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.5" vertical-offset="1281" max-vertical-offset="1980">
+          <caret line="115" column="55" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/rfid_form_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="574">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/user_registration/user_registration_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1050">
+          <caret line="32" column="140" selection-start-line="32" selection-start-column="140" selection-end-line="32" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/user_registration/user_registration_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="206" max-vertical-offset="1050">
+          <caret line="32" column="38" selection-start-line="29" selection-start-column="32" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/medical_drug/registered_medicines.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="596" max-vertical-offset="1395">
+          <caret line="53" column="77" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1410">
+          <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/medical_drug/medicine_edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="677" max-vertical-offset="1260">
+          <caret line="60" column="148" selection-start-line="60" selection-start-column="148" selection-end-line="60" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/sidemenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="285" max-vertical-offset="2295">
+          <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/user_registration/user_registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="574">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/reader_registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="105">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1050">
+          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/reader_registration_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/tagging_level_configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="1230">
+          <caret line="48" column="124" selection-start-line="48" selection-start-column="111" selection-end-line="48" selection-end-column="124" />
+          <folding>
+            <marker date="1413217363000" expanded="false" signature="427:439" placeholder="..." />
+            <marker date="1413217363000" expanded="false" signature="585:597" placeholder="..." />
+            <marker date="1413217363000" expanded="false" signature="748:760" placeholder="..." />
+            <marker date="1413217363000" expanded="false" signature="885:899" placeholder="..." />
+            <marker date="1413217363000" expanded="true" signature="900:1089" placeholder="..." />
+            <marker date="1413217363000" expanded="true" signature="2033:2225" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/tag_registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1275">
+          <caret line="53" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+          <folding>
+            <marker date="1413217363000" expanded="false" signature="427:439" placeholder="..." />
+            <marker date="1413217363000" expanded="false" signature="575:587" placeholder="..." />
+            <marker date="1413217363000" expanded="false" signature="728:740" placeholder="..." />
+            <marker date="1413217363000" expanded="false" signature="855:869" placeholder="..." />
+            <marker date="1413217363000" expanded="true" signature="870:1130" placeholder="..." />
+            <marker date="1413217363000" expanded="true" signature="2120:2387" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/user_registration/privilege_configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="1230">
+          <caret line="50" column="116" selection-start-line="50" selection-start-column="116" selection-end-line="50" selection-end-column="116" />
+          <folding>
+            <marker date="1413219145000" expanded="false" signature="456:468" placeholder="..." />
+            <marker date="1413219145000" expanded="false" signature="611:623" placeholder="..." />
+            <marker date="1413219145000" expanded="false" signature="770:782" placeholder="..." />
+            <marker date="1413219145000" expanded="false" signature="903:917" placeholder="..." />
+            <marker date="1413219145000" expanded="true" signature="918:1166" placeholder="..." />
+            <marker date="1413219145000" expanded="true" signature="2041:2212" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/tagging_level_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="675">
+          <caret line="30" column="129" selection-start-line="30" selection-start-column="129" selection-end-line="30" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dvs_scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="2175">
+          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#medical_drug_submit_data#0" expanded="false" />
+            <element signature="n#!!block;n#medical_drug_edit_data#0" expanded="false" />
+            <element signature="n#!!block;n#medical_drug_delete_data#0" expanded="false" />
+            <element signature="n#!!block;n#rfid_edit_data#0" expanded="false" />
+            <element signature="n#!!block;n#rfid_delete_data#0" expanded="false" />
+            <element signature="n#!!block;n#user_add_new_data#0" expanded="false" />
+            <element signature="n#!!block;n#tab_options#0" expanded="false" />
+            <element signature="n#!!block;n#user_submit_data#0" expanded="false" />
+            <element signature="n#!!block;n#user_edit_data#0" expanded="false" />
+            <element signature="n#!!block;n#user_delete_data#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/user_registration/privilege_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="675">
+          <caret line="27" column="89" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/dvscontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1614" max-vertical-offset="3045">
+          <caret line="390" column="59" selection-start-line="390" selection-start-column="51" selection-end-line="390" selection-end-column="59" />
+          <folding>
+            <element signature="n#index#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#med_config_delete#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#medical_drug_registration#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#medicine_configuration#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#med_config_registration#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#med_config_edit#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="e#13468#19548#0#PHP" expanded="false" />
+            <element signature="e#15370#19548#0#PHP" expanded="false" />
+            <element signature="n#rfid_edit#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#rfid_delete#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#user_registration_tabs#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#user_submission#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#user_edit#0;n#dvscontroller#0;n#!!top" expanded="false" />
+            <element signature="n#user_delete#0;n#dvscontroller#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/Forms/rfid/tag_registration_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="735">
+          <caret line="27" column="104" selection-start-line="27" selection-start-column="96" selection-end-line="27" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/dvs_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8432056" vertical-offset="1031" max-vertical-offset="2490">
+          <caret line="349" column="32" selection-start-line="349" selection-start-column="32" selection-end-line="349" selection-end-column="32" />
+          <folding>
+            <element signature="n#save_user_registration_data#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#get_tab_name#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#select_specific_user#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#user_delete_query#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#update_user_details#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#get_selected_tab_data#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#med_config_registration#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#load_med_edit_types#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#load_med_types#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#save_med_config_changes#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#delete_med_config#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#load_med_category#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#load_manufacturer#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#load_medicine_registered#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#load_med_registered#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#load_med_edit_categories#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#select_particular_query#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#update_entry#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#delete_query#0;n#Dvs_model#0;n#!!top" expanded="false" />
+            <element signature="n#select_query_specific#0;n#Dvs_model#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

@@ -1,0 +1,761 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 -- phpMyAdmin SQL Dump\
+-- version 4.2.5\
+-- http://www.phpmyadmin.net\
+--\
+-- Host: localhost:8889\
+-- Generation Time: Oct 13, 2014 at 04:06 PM\
+-- Server version: 5.5.38\
+-- PHP Version: 5.5.14\
+\
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\
+SET time_zone = "+00:00";\
+\
+--\
+-- Database: `dvs`\
+--\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_batch`\
+--\
+\
+CREATE TABLE `tbl_batch` (\
+`id` int(11) NOT NULL,\
+  `batch_number` int(11) NOT NULL,\
+  `description` text NOT NULL,\
+  `status` varchar(200) NOT NULL,\
+  `oder_information_id` int(11) NOT NULL,\
+  `manu_date` int(11) NOT NULL,\
+  `expire_date` int(11) NOT NULL,\
+  `batch_size_id` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for batch information' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_batch_size`\
+--\
+\
+CREATE TABLE `tbl_batch_size` (\
+`id` int(11) NOT NULL,\
+  `name` varchar(200) NOT NULL,\
+  `size` int(11) NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for batch size' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_batch_tracker`\
+--\
+\
+CREATE TABLE `tbl_batch_tracker` (\
+`id` int(11) NOT NULL,\
+  `location_id` int(11) NOT NULL,\
+  `rfid_id` int(11) NOT NULL,\
+  `datetime_in` datetime NOT NULL,\
+  `datetime_out` datetime NOT NULL,\
+  `level_id` int(11) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for batch tracker information' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_drug_category`\
+--\
+\
+CREATE TABLE `tbl_drug_category` (\
+`id` int(11) NOT NULL,\
+  `name` varchar(200) NOT NULL,\
+  `description` varchar(200) NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Table for drug category eg syrup' AUTO_INCREMENT=7 ;\
+\
+--\
+-- Dumping data for table `tbl_drug_category`\
+--\
+\
+INSERT INTO `tbl_drug_category` (`id`, `name`, `description`, `status`) VALUES\
+(3, 'jackson', 'twalipo', 1),\
+(4, 'grayson', 'mdamo', 1),\
+(5, 'kinjasalamu', 'casto', 1),\
+(6, 'grayson', 'chando', 1);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_drug_type`\
+--\
+\
+CREATE TABLE `tbl_drug_type` (\
+`id` int(11) NOT NULL,\
+  `name` varchar(200) NOT NULL,\
+  `description` varchar(200) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='table for drugs type eg painkiller' AUTO_INCREMENT=6 ;\
+\
+--\
+-- Dumping data for table `tbl_drug_type`\
+--\
+\
+INSERT INTO `tbl_drug_type` (`id`, `name`, `description`, `status`) VALUES\
+(1, 'jackson', 'twalpo', '1'),\
+(2, 'detailssada', 'mpyasana', '1'),\
+(3, 'kijekitilelile', 'ngwalieooo', '1'),\
+(4, 'chemba', 'nadni ndani', '0'),\
+(5, 'newdataa', 'kabisaa', '1');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_internet_verification`\
+--\
+\
+CREATE TABLE `tbl_internet_verification` (\
+  `id` int(11) NOT NULL,\
+  `device_type` varchar(200) NOT NULL,\
+  `received_content` text NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for internet verification';\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_level`\
+--\
+\
+CREATE TABLE `tbl_level` (\
+`id` int(11) NOT NULL,\
+  `level_name` varchar(200) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Table for level ' AUTO_INCREMENT=4 ;\
+\
+--\
+-- Dumping data for table `tbl_level`\
+--\
+\
+INSERT INTO `tbl_level` (`id`, `level_name`, `status`) VALUES\
+(1, 'Level 1 - Tagging Center', '1'),\
+(2, 'Level 2 - Distributer', '1'),\
+(3, 'Level 3 - Healthy Facility', '1');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_location`\
+--\
+\
+CREATE TABLE `tbl_location` (\
+`id` int(11) NOT NULL,\
+  `name` varchar(200) NOT NULL,\
+  `latitude` double NOT NULL,\
+  `longitude` double NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Table for location' AUTO_INCREMENT=26 ;\
+\
+--\
+-- Dumping data for table `tbl_location`\
+--\
+\
+INSERT INTO `tbl_location` (`id`, `name`, `latitude`, `longitude`, `status`) VALUES\
+(17, 'twalipo', 12345678, 87654321, 1),\
+(18, 'twalipo', 1234567, 1234567, 1),\
+(19, 'danielputo', 12345671, 76543212, 1),\
+(20, 'details', 100000, 10000, 1),\
+(21, 'chando', 987876, 67890, 1),\
+(22, 'nyange', 8999900, 3738282, 1),\
+(23, 'theONeandOnly', 192889, 1289121, 1),\
+(24, 'kilimanjaro', 12099, 128899, 1),\
+(25, 'jackson', 101019, 1921010, 1);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_medical_drug`\
+--\
+\
+CREATE TABLE `tbl_medical_drug` (\
+`id` int(11) NOT NULL,\
+  `name` varchar(200) NOT NULL,\
+  `drug_type_id` int(11) NOT NULL,\
+  `drug_category_id` int(11) NOT NULL,\
+  `manu_id` int(11) NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;\
+\
+--\
+-- Dumping data for table `tbl_medical_drug`\
+--\
+\
+INSERT INTO `tbl_medical_drug` (`id`, `name`, `drug_type_id`, `drug_category_id`, `manu_id`, `status`) VALUES\
+(1, 'jackson', 1, 3, 1, 1),\
+(2, 'twalipo', 5, 3, 5, 1),\
+(3, 'kije', 3, 4, 3, 0),\
+(4, 'everything', 2, 6, 3, 1),\
+(5, 'kokooooo', 1, 3, 18, 1),\
+(6, 'utumbo', 1, 3, 18, 1),\
+(7, 'paracetamol', 1, 6, 19, 0),\
+(8, 'metronidazole', 1, 5, 18, 0);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_message_type`\
+--\
+\
+CREATE TABLE `tbl_message_type` (\
+`id` int(11) NOT NULL,\
+  `name` int(11) NOT NULL,\
+  `description` int(11) NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for message type' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_order`\
+--\
+\
+CREATE TABLE `tbl_order` (\
+`id` int(11) NOT NULL,\
+  `client_id` int(11) NOT NULL,\
+  `manu_id` int(11) NOT NULL,\
+  `order_date` datetime NOT NULL,\
+  `order_number` int(11) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for order information' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_order_information`\
+--\
+\
+CREATE TABLE `tbl_order_information` (\
+`id` int(11) NOT NULL,\
+  `order_id` int(11) NOT NULL,\
+  `medical_drug_id` int(11) NOT NULL,\
+  `number_of_batchs` int(11) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for order_information' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_pharmacy`\
+--\
+\
+CREATE TABLE `tbl_pharmacy` (\
+`id` int(11) NOT NULL,\
+  `user_id` int(11) NOT NULL,\
+  `name` varchar(200) NOT NULL,\
+  `location_id` int(11) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for Pharmacy information' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_pharmacy_verification`\
+--\
+\
+CREATE TABLE `tbl_pharmacy_verification` (\
+`id` int(11) NOT NULL,\
+  `pharmacy_id` int(11) NOT NULL,\
+  `latitude` double NOT NULL,\
+  `longitude` double NOT NULL,\
+  `code` varchar(200) NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for pharmacy and primary health verification information' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_priviledge`\
+--\
+\
+CREATE TABLE `tbl_priviledge` (\
+`id` int(11) NOT NULL,\
+  `description` varchar(200) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;\
+\
+--\
+-- Dumping data for table `tbl_priviledge`\
+--\
+\
+INSERT INTO `tbl_priviledge` (`id`, `description`, `status`) VALUES\
+(1, 'MSD', '1'),\
+(2, 'TFDA', '1'),\
+(3, 'DMO', '1'),\
+(4, 'MOH', '1'),\
+(5, 'PRIVATE-WHOLESALER', '1'),\
+(6, 'MANUFACTURER', '1');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_psc_actors`\
+--\
+\
+CREATE TABLE `tbl_psc_actors` (\
+`id` int(11) NOT NULL,\
+  `user_id` int(11) NOT NULL,\
+  `name` varchar(200) NOT NULL,\
+  `privilige_id` int(11) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Table for Supply Chain Actors' AUTO_INCREMENT=20 ;\
+\
+--\
+-- Dumping data for table `tbl_psc_actors`\
+--\
+\
+INSERT INTO `tbl_psc_actors` (`id`, `user_id`, `name`, `privilige_id`, `status`) VALUES\
+(1, 1, 'jackson twalipo', 1, '1'),\
+(2, 2, 'nelson malekela', 1, '1'),\
+(8, 3, 'Gyason Chando', 2, '1'),\
+(9, 4, 'Athony Sambaiga', 2, '1'),\
+(10, 5, 'Willson Daniel', 3, '1'),\
+(11, 6, 'Godfrey Muhikwa', 3, '1'),\
+(12, 15, '', 1, '1'),\
+(13, 16, '', 5, '1'),\
+(14, 17, '', 5, '1'),\
+(15, 18, '', 1, '1'),\
+(16, 19, 'new name', 1, '1'),\
+(17, 20, 'NELSON OF MSD', 1, '1'),\
+(18, 21, 'zenufa', 6, '1'),\
+(19, 22, 'keko', 6, '1');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_reader`\
+--\
+\
+CREATE TABLE `tbl_reader` (\
+`id` int(11) NOT NULL,\
+  `name` varchar(200) NOT NULL,\
+  `location_id` int(11) NOT NULL,\
+  `vendor` varchar(200) NOT NULL,\
+  `level_id` int(11) NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;\
+\
+--\
+-- Dumping data for table `tbl_reader`\
+--\
+\
+INSERT INTO `tbl_reader` (`id`, `name`, `location_id`, `vendor`, `level_id`, `status`) VALUES\
+(1, 'jackson', 18, 'charles', 0, 1),\
+(2, 'nelson', 19, 'malekelakinjumbi', 1, 1),\
+(3, 'deokimaro', 20, 'shayo', 2, 1),\
+(4, 'grayson', 21, 'julius', 2, 0),\
+(5, 'muhikwa', 22, 'godfrey', 1, 1),\
+(6, 'kinjekitile', 23, 'gwale', 2, 0),\
+(7, 'jacksoncold', 24, 'nameis', 2, 0),\
+(8, 'kinja ', 25, 'kasto', 2, 0);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_rfid`\
+--\
+\
+CREATE TABLE `tbl_rfid` (\
+`id` int(11) NOT NULL,\
+  `rfid_tag_id` int(11) NOT NULL,\
+  `batch_id` int(11) NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for rfid information' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_rfid_tag`\
+--\
+\
+CREATE TABLE `tbl_rfid_tag` (\
+`id` int(11) NOT NULL,\
+  `tag_info` varchar(200) NOT NULL,\
+  `vendor` varchar(200) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for rfid tag information' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_scratch_code`\
+--\
+\
+CREATE TABLE `tbl_scratch_code` (\
+`id` int(11) NOT NULL,\
+  `scratch_number` int(11) NOT NULL,\
+  `batch_id` int(11) NOT NULL,\
+  `status` varchar(200) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for scratch code information' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_sms`\
+--\
+\
+CREATE TABLE `tbl_sms` (\
+`id` int(11) NOT NULL,\
+  `phone_number` varchar(200) NOT NULL,\
+  `message_type_id` int(11) NOT NULL,\
+  `received_content` text NOT NULL,\
+  `replied_content` text NOT NULL,\
+  `time` int(11) NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='table for sms' AUTO_INCREMENT=1 ;\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `tbl_users`\
+--\
+\
+CREATE TABLE `tbl_users` (\
+`user_id` int(11) NOT NULL,\
+  `username` varchar(200) NOT NULL,\
+  `password` varchar(200) NOT NULL,\
+  `email` varchar(200) NOT NULL,\
+  `phone_number` varchar(200) NOT NULL,\
+  `alt_phone_number` varchar(200) NOT NULL,\
+  `address` varchar(200) NOT NULL,\
+  `status` int(11) NOT NULL\
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Table for user information' AUTO_INCREMENT=23 ;\
+\
+--\
+-- Dumping data for table `tbl_users`\
+--\
+\
+INSERT INTO `tbl_users` (`user_id`, `username`, `password`, `email`, `phone_number`, `alt_phone_number`, `address`, `status`) VALUES\
+(1, 'jacksontwalipo', 'twalipo', 'endlesschaste@gmail.com', '0767288777', '0658298888', 'Kigamboni', 1),\
+(2, 'graysonjulius', 'grayson', 'grayson@gmail.com', '0767288231', '0765232876', 'Dar-es-salaams', 1),\
+(3, 'sambaiga', 'antony', 'sambaiga@gmail.com', '0871234123', '0765612313', 'songea', 1),\
+(4, 'JumanneId', 'juma', 'kajumulo@gmail.com', '0192826114', '0756514515', 'dodoma-makulu', 1),\
+(5, 'joshua', 'joshua', 'namejoshua@yahoo.com', '07415277700', '78263286300', 'tabata-kimanga', 1),\
+(6, 'kajimulo', 'unde\'83ined', 'kaji@yahoo.com', '0767188777', '0716355177', 'dodoma', 1),\
+(7, 'kijekitile', 'kijekitile', 'gwale@kiswahili.com', '07615621919', '08672121123', 'kigoma mjini', 1),\
+(12, 'jljjdlkajlj', 'kdjaksldj', 'jajdlaj@gmail.com', '1298179298798', '27938719', 'dkjlaldl', 1),\
+(15, 'rehemamaro', 'marorehema', 'rehema@gmail.com', '0767188777', '0987656543', 'kigoma', 0),\
+(16, 'sheli', 'sheli', 'shelisheli', '0876561233', '01817261281', 'world', 1),\
+(17, 'lugha', 'total', 'ya kishowhili', '012756889', '130237092', 'mbeya', 0),\
+(18, 'kijae', 'hayoppooo', 'kile@gamil.com', '10292821', '29819218', 'mpigimagoe', 1),\
+(19, 'tigotanzania', 'tigotz', 'tigo@info.com', '0612123321', '1290192121', 'tanzania', 1),\
+(20, 'nelson', 'jkjkjkjj', 'nmnmnm@nmnmnm.com', '0987777', '89990', 'songea', 1),\
+(21, 'nelson', 'uiuiuiui', 'zenufa@gmail.com', '127878', '78787878', 'dar', 1),\
+(22, 'keko', 'uiuiui', 'keko@manu.com', '0909090', '878787878', 'keko-dar', 1);\
+\
+--\
+-- Indexes for dumped tables\
+--\
+\
+--\
+-- Indexes for table `tbl_batch`\
+--\
+ALTER TABLE `tbl_batch`\
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `oder_information_id` (`oder_information_id`), ADD UNIQUE KEY `batch_size_id` (`batch_size_id`);\
+\
+--\
+-- Indexes for table `tbl_batch_size`\
+--\
+ALTER TABLE `tbl_batch_size`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_batch_tracker`\
+--\
+ALTER TABLE `tbl_batch_tracker`\
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `location` (`location_id`), ADD KEY `rfid_id` (`rfid_id`), ADD KEY `level_id` (`level_id`), ADD KEY `rfid_id_2` (`rfid_id`), ADD KEY `level_id_2` (`level_id`), ADD KEY `location_id` (`location_id`);\
+\
+--\
+-- Indexes for table `tbl_drug_category`\
+--\
+ALTER TABLE `tbl_drug_category`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_drug_type`\
+--\
+ALTER TABLE `tbl_drug_type`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_level`\
+--\
+ALTER TABLE `tbl_level`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_location`\
+--\
+ALTER TABLE `tbl_location`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_medical_drug`\
+--\
+ALTER TABLE `tbl_medical_drug`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_message_type`\
+--\
+ALTER TABLE `tbl_message_type`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_order`\
+--\
+ALTER TABLE `tbl_order`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_order_information`\
+--\
+ALTER TABLE `tbl_order_information`\
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `order_id` (`order_id`), ADD UNIQUE KEY `medical_drug_id` (`medical_drug_id`), ADD UNIQUE KEY `number_of_batchs` (`number_of_batchs`);\
+\
+--\
+-- Indexes for table `tbl_pharmacy`\
+--\
+ALTER TABLE `tbl_pharmacy`\
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `location_id` (`location_id`), ADD KEY `user_id` (`user_id`);\
+\
+--\
+-- Indexes for table `tbl_pharmacy_verification`\
+--\
+ALTER TABLE `tbl_pharmacy_verification`\
+ ADD PRIMARY KEY (`id`), ADD KEY `pharmacy_id` (`pharmacy_id`);\
+\
+--\
+-- Indexes for table `tbl_priviledge`\
+--\
+ALTER TABLE `tbl_priviledge`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_psc_actors`\
+--\
+ALTER TABLE `tbl_psc_actors`\
+ ADD PRIMARY KEY (`id`), ADD KEY `user_id` (`user_id`), ADD KEY `privilige_id` (`privilige_id`), ADD KEY `privilige_id_2` (`privilige_id`);\
+\
+--\
+-- Indexes for table `tbl_reader`\
+--\
+ALTER TABLE `tbl_reader`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_rfid`\
+--\
+ALTER TABLE `tbl_rfid`\
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `rfid_tag_id_2` (`rfid_tag_id`), ADD KEY `rfid_tag_id` (`rfid_tag_id`), ADD KEY `batch_id` (`batch_id`);\
+\
+--\
+-- Indexes for table `tbl_rfid_tag`\
+--\
+ALTER TABLE `tbl_rfid_tag`\
+ ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `tbl_scratch_code`\
+--\
+ALTER TABLE `tbl_scratch_code`\
+ ADD PRIMARY KEY (`id`), ADD KEY `batch_id` (`batch_id`);\
+\
+--\
+-- Indexes for table `tbl_sms`\
+--\
+ALTER TABLE `tbl_sms`\
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `message_type_id` (`message_type_id`);\
+\
+--\
+-- Indexes for table `tbl_users`\
+--\
+ALTER TABLE `tbl_users`\
+ ADD PRIMARY KEY (`user_id`);\
+\
+--\
+-- AUTO_INCREMENT for dumped tables\
+--\
+\
+--\
+-- AUTO_INCREMENT for table `tbl_batch`\
+--\
+ALTER TABLE `tbl_batch`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_batch_size`\
+--\
+ALTER TABLE `tbl_batch_size`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_batch_tracker`\
+--\
+ALTER TABLE `tbl_batch_tracker`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_drug_category`\
+--\
+ALTER TABLE `tbl_drug_category`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;\
+--\
+-- AUTO_INCREMENT for table `tbl_drug_type`\
+--\
+ALTER TABLE `tbl_drug_type`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;\
+--\
+-- AUTO_INCREMENT for table `tbl_level`\
+--\
+ALTER TABLE `tbl_level`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;\
+--\
+-- AUTO_INCREMENT for table `tbl_location`\
+--\
+ALTER TABLE `tbl_location`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;\
+--\
+-- AUTO_INCREMENT for table `tbl_medical_drug`\
+--\
+ALTER TABLE `tbl_medical_drug`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;\
+--\
+-- AUTO_INCREMENT for table `tbl_message_type`\
+--\
+ALTER TABLE `tbl_message_type`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_order`\
+--\
+ALTER TABLE `tbl_order`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_order_information`\
+--\
+ALTER TABLE `tbl_order_information`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_pharmacy`\
+--\
+ALTER TABLE `tbl_pharmacy`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_pharmacy_verification`\
+--\
+ALTER TABLE `tbl_pharmacy_verification`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_priviledge`\
+--\
+ALTER TABLE `tbl_priviledge`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;\
+--\
+-- AUTO_INCREMENT for table `tbl_psc_actors`\
+--\
+ALTER TABLE `tbl_psc_actors`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;\
+--\
+-- AUTO_INCREMENT for table `tbl_reader`\
+--\
+ALTER TABLE `tbl_reader`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;\
+--\
+-- AUTO_INCREMENT for table `tbl_rfid`\
+--\
+ALTER TABLE `tbl_rfid`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_rfid_tag`\
+--\
+ALTER TABLE `tbl_rfid_tag`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_scratch_code`\
+--\
+ALTER TABLE `tbl_scratch_code`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_sms`\
+--\
+ALTER TABLE `tbl_sms`\
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;\
+--\
+-- AUTO_INCREMENT for table `tbl_users`\
+--\
+ALTER TABLE `tbl_users`\
+MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;\
+--\
+-- Constraints for dumped tables\
+--\
+\
+--\
+-- Constraints for table `tbl_batch`\
+--\
+ALTER TABLE `tbl_batch`\
+ADD CONSTRAINT `tbl_batch_ibfk_1` FOREIGN KEY (`oder_information_id`) REFERENCES `tbl_order_information` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,\
+ADD CONSTRAINT `tbl_batch_ibfk_2` FOREIGN KEY (`batch_size_id`) REFERENCES `tbl_batch_size` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\
+\
+--\
+-- Constraints for table `tbl_batch_tracker`\
+--\
+ALTER TABLE `tbl_batch_tracker`\
+ADD CONSTRAINT `tbl_batch_tracker_ibfk_1` FOREIGN KEY (`rfid_id`) REFERENCES `tbl_rfid` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,\
+ADD CONSTRAINT `tbl_batch_tracker_ibfk_2` FOREIGN KEY (`level_id`) REFERENCES `tbl_level` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,\
+ADD CONSTRAINT `tbl_batch_tracker_ibfk_3` FOREIGN KEY (`location_id`) REFERENCES `tbl_location` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\
+\
+--\
+-- Constraints for table `tbl_order_information`\
+--\
+ALTER TABLE `tbl_order_information`\
+ADD CONSTRAINT `tbl_order_information_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `tbl_order` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\
+\
+--\
+-- Constraints for table `tbl_pharmacy`\
+--\
+ALTER TABLE `tbl_pharmacy`\
+ADD CONSTRAINT `tbl_pharmacy_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tbl_users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,\
+ADD CONSTRAINT `tbl_pharmacy_ibfk_2` FOREIGN KEY (`location_id`) REFERENCES `tbl_location` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\
+\
+--\
+-- Constraints for table `tbl_pharmacy_verification`\
+--\
+ALTER TABLE `tbl_pharmacy_verification`\
+ADD CONSTRAINT `tbl_pharmacy_verification_ibfk_1` FOREIGN KEY (`pharmacy_id`) REFERENCES `tbl_pharmacy` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\
+\
+--\
+-- Constraints for table `tbl_psc_actors`\
+--\
+ALTER TABLE `tbl_psc_actors`\
+ADD CONSTRAINT `tbl_psc_actors_ibfk_1` FOREIGN KEY (`privilige_id`) REFERENCES `tbl_priviledge` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\
+\
+--\
+-- Constraints for table `tbl_rfid`\
+--\
+ALTER TABLE `tbl_rfid`\
+ADD CONSTRAINT `tbl_rfid_ibfk_1` FOREIGN KEY (`batch_id`) REFERENCES `tbl_batch` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,\
+ADD CONSTRAINT `tbl_rfid_ibfk_2` FOREIGN KEY (`rfid_tag_id`) REFERENCES `tbl_rfid_tag` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\
+\
+--\
+-- Constraints for table `tbl_scratch_code`\
+--\
+ALTER TABLE `tbl_scratch_code`\
+ADD CONSTRAINT `tbl_scratch_code_ibfk_1` FOREIGN KEY (`batch_id`) REFERENCES `tbl_batch` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\
+\
+--\
+-- Constraints for table `tbl_sms`\
+--\
+ALTER TABLE `tbl_sms`\
+ADD CONSTRAINT `tbl_sms_ibfk_1` FOREIGN KEY (`message_type_id`) REFERENCES `tbl_message_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;\
+}
