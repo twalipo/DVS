@@ -234,7 +234,10 @@ function menu_options(form_header) {
     }else if(form_header=="privilege"){
         link = "index.php/registration_view/"+form_header;
 
-    } if(form_header=="tagging_level"){
+    }else if(form_header=="tagging_level"){
+        link = "index.php/registration_view/"+form_header;
+
+    }else if(form_header=="pharmacy_registration"){
         link = "index.php/registration_view/"+form_header;
     }
 

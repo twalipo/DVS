@@ -411,6 +411,18 @@ class Dvs_model extends CI_Model{
             $this->status   = 0;
             $this->db->update('tbl_reader', $this, array('id' => $id));
         }
+        else if($requesting_page == 'tagging_level'){
+            $this->status   = 0;
+            $this->db->update('tbl_level', $this, array('id' => $id));
+        }
+        else if($requesting_page == 'tag_registration'){
+            $this->status   = 0;
+            $this->db->update('tbl_rfid_tag', $this, array('id' => $id));
+        }
+        else if($requesting_page == 'privilege'){
+            $this->status   = 0;
+            $this->db->update('tbl_priviledge', $this, array('id' => $id));
+        }
 
     }
 
@@ -462,6 +474,15 @@ class Dvs_model extends CI_Model{
         }else if($form_name == 'privilege'){
             $status = 1;
             $query = $this->db->get_where('tbl_priviledge', array('status' => $status));
+            return $query->result_array();
+        }else if($form_name == 'pharmacy_registration'){
+            $status = 1;
+            $this->db->select('p.id,p.name,tbl_location.name as location_name,p.email,p.phone_number,p.alt_phone_number');
+            $this->db->from('tbl_pharmacy p');
+            $this->db->where('p.status',$status);
+            $this->db->join('tbl_location', 'tbl_location.id = p.location_id');
+
+            $query = $this->db->get();
             return $query->result_array();
         }
 

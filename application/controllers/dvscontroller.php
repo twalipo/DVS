@@ -276,6 +276,11 @@ class dvscontroller extends CI_Controller{
             $data['message'] = "";
             $data['privilege_details'] = $this->dvs_model->select_query($form_name);
             $this->load->view('Forms/user_registration/privilege_configuration', $data);
+        }else if($form_name == 'pharmacy_registration'){
+            $data['title'] = "Pharmacy Registration";
+            $data['message'] = "";
+            $data['pharmacy_details'] = $this->dvs_model->select_query($form_name);
+            $this->load->view('Forms/pharmacy/pharmacy_registration', $data);
         }
 
     }
@@ -405,7 +410,8 @@ class dvscontroller extends CI_Controller{
                 }
 
             }
-        }else if($form_name == 'privilege'){
+        }
+        else if($form_name == 'privilege'){
             $id=$this->input->post('id');
             /**
              * if $id is not set then it's an insert request
@@ -463,6 +469,33 @@ class dvscontroller extends CI_Controller{
             $data['level_details'] = $this->dvs_model->select_particular_query('levels');
             $data['reader_details'] = $this->dvs_model->select_query($form_name);
             $this->load->view('Forms/rfid/reader_registration', $data);
+        }
+        else if($form_name == 'tagging_level'){
+
+            $id = $array[3];
+            $this->dvs_model->delete_query($form_name,$id);
+            $data['message'] = "deleted";
+            $data['title'] = "Tagging  Level Configuration";
+            $data['level_details'] = $this->dvs_model->select_query($form_name);
+            $this->load->view('Forms/rfid/tagging_level_configuration', $data);
+        }
+        else if($form_name == 'tag_registration'){
+
+            $id = $array[3];
+            $this->dvs_model->delete_query($form_name,$id);
+            $data['message'] = "deleted";
+            $data['title'] = "Tag Registration";
+            $data['tag_details'] = $this->dvs_model->select_query($form_name);
+            $this->load->view('Forms/rfid/tag_registration', $data);
+        }
+        else if($form_name == 'privilege'){
+
+            $id = $array[3];
+            $this->dvs_model->delete_query($form_name,$id);
+            $data['message'] = "deleted";
+            $data['title'] = "Privilege Configuration";
+            $data['privilege_details'] = $this->dvs_model->select_query($form_name);
+            $this->load->view('Forms/user_registration/privilege_configuration', $data);
         }
     }
 
