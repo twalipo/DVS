@@ -35,11 +35,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="latitude">Location Latitude</label>
-                                    <input type="number" class="form-control" id="latitude" name="latitude" placeholder="Location Latitude">
+                                    <input type="number" class="form-control" id="latitude" name="latitude" placeholder="Location Latitude" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label for="longitude">Location Longitude</label>
-                                    <input type="number" class="form-control" id="longitude" name="longitude" placeholder="Location Longitude">
+                                    <input type="number" class="form-control" id="longitude" name="longitude" placeholder="Location Longitude" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
@@ -58,6 +58,8 @@
                                 <button type="button" class="btn btn-default" id="sub_button" name="sub_button" onclick="menu_options('pharmacy_registration')">Cancel</button>
                             </div>
                         </form>
+                        <div class="col-lg-6" id="googleMap" style="width:500px;height:380px; background-color: bisque"></div>
+                        <script>initialize();</script>
                     </div>
                 </div>
             </div>

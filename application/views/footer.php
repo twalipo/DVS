@@ -115,12 +115,12 @@
 <script src="<?php echo base_url('assets/js/dvsJquery.js')?>"></script>
 <script src="<?php echo base_url('assets/js/dvs_scripts.js')?>"></script>
 
+<!-- Google map JavaScript -->
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCApwAA0CTiYmDROiKB0T9YIM6OGIyyB5U&sensor=false"></script>
+
+
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-<script>
-    $(document).ready(function() {
-        $('#dataTables-example').dataTable();
-    });
-</script>
+
 </body>
 
 </html>

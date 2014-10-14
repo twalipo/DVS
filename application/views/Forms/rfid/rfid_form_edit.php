@@ -21,7 +21,6 @@
             <div class="panel-body">
                 <div id="content_fetcher">
                     <div id="registration_form" style="margin-top: 16pt">
-                        <?PHP if($current_page == 'reader_registration'){?>
                             <form role="form" id="userForm" name="userForm" >
                                 <div class="col-lg-6">
                                     <input type="hidden"  id="id" name="id" value="<?PHP echo $reader_details['id'];?>">
@@ -41,11 +40,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="latitude">Location Latitude</label>
-                                        <input type="text" class="form-control" id="latitude" value="<?php echo $reader_details['latitude'];?>" name="latitude" placeholder="Location Latitude">
+                                        <input type="text" class="form-control" id="latitude" value="<?php echo $reader_details['latitude'];?>" name="latitude" placeholder="Location Latitude" readonly>
                                     </div>
                                     <div class="form-group">
                                         <label for="longitude">Location Longitude</label>
-                                        <input type="text" class="form-control" id="longitude" value="<?php echo $reader_details['longitude'];?>" name="longitude" placeholder="Location Longitude">
+                                        <input type="text" class="form-control" id="longitude" value="<?php echo $reader_details['longitude'];?>" name="longitude" placeholder="Location Longitude" readonly>
                                     </div>
 
                                     <div class="form-group dropdown">
@@ -65,7 +64,8 @@
                                     <button type="button" class="btn btn-default" id="sub_button" name="sub_button" onclick="menu_options('reader_registration')">Cancel</button>
                                 </div>
                             </form>
-                        <?PHP }?>
+                        <div class="col-lg-6" id="googleMap" style="width:500px;height:380px; background-color: bisque"></div>
+                        <script>initialize();</script>
                     </div>
                 </div>
             </div>

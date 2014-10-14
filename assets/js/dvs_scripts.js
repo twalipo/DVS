@@ -327,8 +327,101 @@ function reg_delete_data(form_header,delete_id){
 
 }
 
+var customIcons = {
+    restaurant: {
+        icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
+    },
+    bar: {
+        icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
+    }
+};
 
 
+var map;
+function initialize()
+{
+
+    var location_name;
+    var latitude;
+    var longitude;
+    var additional_details;
+
+    location_name = $('#location').val();
+    latitude = $('#latitude').val();
+    longitude = $('#longitude').val();
+    additional_details = $('#vendor').val();
+
+    //create default location
+    var default_location=new google.maps.LatLng(-6.702093,36.022208);
+
+    var mapProp = {
+        center:default_location,
+        zoom:6,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+    if(location_name != ''){
+
+        var myLocation=new google.maps.LatLng(latitude,longitude);
+        //creata a maker based on location
+        var marker=new google.maps.Marker({
+            position:myLocation
+        });
+
+        marker.setMap(map);
+
+        var add_info = '';
+        if(additional_details != null){
+            add_info = 'Vendor: '+additional_details+'<br>';
+        }else{
+
+        }
+
+        //add information to maker
+        var locale='<h4>'+location_name+'</h4>'+add_info+'Latitude: ' + latitude + '<br>Longitude: ' + longitude;
+        var infowindow = new google.maps.InfoWindow({
+            content:locale
+        });
+
+        //show the information
+        infowindow.open(map,marker);
+
+        map.setZoom(14);
+        map.setCenter(marker.getPosition());
+
+    }
+
+     /*
+      *or show the information after marker clicked
+      *
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map,marker);
+    });
+    */
+
+    //place a marker on the map
+    google.maps.event.addListener(map, 'click', function(event) {
+        placeMarker(event.latLng);
+    });
+}
+
+function placeMarker(location) {
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+    });
+
+    var content = '<h4>My New Location</h4> Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng();
+
+    $('#latitude').val(location.lat());
+    $('#longitude').val(location.lng());
+
+    var infowindow = new google.maps.InfoWindow({
+        content: content
+    });
+    infowindow.open(map,marker);
+}
 
 
 

@@ -34,15 +34,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="location">Location Name</label>
-                                    <input type="text" class="form-control" id="location" name="location" placeholder="Location Name">
+                                    <input type="text" class="form-control" id="location" name="location" placeholder="Location Name" >
                                 </div>
                                 <div class="form-group">
                                     <label for="latitude">Location Latitude</label>
-                                    <input type="text" class="form-control" id="latitude" name="latitude" placeholder="Location Latitude">
+                                    <input type="text" class="form-control" id="latitude" name="latitude" placeholder="Choose location from map" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label for="longitude">Location Longitude</label>
-                                    <input type="text" class="form-control" id="longitude" name="longitude" placeholder="Location Longitude">
+                                    <input type="text" class="form-control" id="longitude" name="longitude" placeholder="Choose location from map" readonly>
                                 </div>
 
                                 <div class="form-group dropdown">
@@ -62,10 +62,15 @@
                                 <button type="button" class="btn btn-default" id="sub_button" name="sub_button" onclick="rfid_submit_data('reader_registration','insert')">Save</button>
                                 <button type="button" class="btn btn-default" id="sub_button" name="sub_button" onclick="menu_options('reader_registration')">Cancel</button>
                             </div>
+
                         </form>
+                        <div class="col-lg-6" id="googleMap" style="width:500px;height:380px; background-color: bisque"></div>
+                        <script>initialize();</script>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 </div>
